@@ -16,9 +16,13 @@ open class WebSecurityConfiguration(/* private val customUserDetailsService: Cus
         http.csrf().disable()
         http.authorizeRequests()
                 .antMatchers("/web/*").authenticated()
+                .antMatchers("/resources/static/**").permitAll()
+                .antMatchers("/info").permitAll()
+                .antMatchers("/health").permitAll()
                 .anyRequest().permitAll()
                 .and()
-                .formLogin().permitAll()
+                .formLogin().loginPage("/login").permitAll()
+
     }
 
     override fun configure(auth: AuthenticationManagerBuilder) {
