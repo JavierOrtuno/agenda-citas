@@ -1,0 +1,26 @@
+
+    {
+        "_id": 1,
+        "name": "SUPER",
+        "lastName": "APELLIDO",
+        "phone": "",
+        "userID": 1
+
+    },
+    {
+        "_id": 2,
+        "name": "ADMIN",
+        "lastName": "APELLIDO",
+        "phone": "",
+        "userID": 2
+
+    },
+    {
+        "_id": 3,
+        "name": "TEST",
+        "lastName": "APELLIDO",
+        "phone": "",
+        "userID": 3
+
+    }
+

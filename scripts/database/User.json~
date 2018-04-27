@@ -1,0 +1,25 @@
+
+"User": [
+    {
+        "_id": 1,
+        "username": "hantroke@gmail.com",
+        "password": "qweqwe123",
+        "role": [ "ADMIN", "SUPER" ]
+
+    },
+    {
+        "_id": 2,
+        "username": "linda@gmail.com",
+        "password": "qweqwe123",
+        "role": [ "ADMIN" ]
+
+    },
+    {
+        "_id": 3,
+        "username": "test@gmail.com",
+        "password": "qweqwe123",
+        "role": [ "USER" ]
+
+    }
+]
+
