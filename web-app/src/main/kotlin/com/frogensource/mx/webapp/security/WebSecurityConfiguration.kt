@@ -15,10 +15,19 @@ open class WebSecurityConfiguration(/* private val customUserDetailsService: Cus
     override fun configure(http: HttpSecurity) {
         http.csrf().disable()
         http.authorizeRequests()
-                .antMatchers("/web/*").authenticated()
+                .antMatchers("/web/**").authenticated()
+                // .antMatchers("/admin/*").authenticated()
+                .antMatchers("/admin/**").permitAll()
+                .antMatchers("/signup/**").permitAll()
+
+                // Resources
                 .antMatchers("/resources/static/**").permitAll()
+                // .antMatchers("/resources/static/templates/**").authenticated()
+
+                // Actuator URL
                 .antMatchers("/info").permitAll()
                 .antMatchers("/health").permitAll()
+
                 .anyRequest().permitAll()
                 .and()
                 .formLogin().loginPage("/login").permitAll()

@@ -10,11 +10,21 @@ import org.springframework.web.bind.annotation.GetMapping
 class LoginController {
 
     @GetMapping("/login")
-    fun loginPage(@RequestParam(name = "name", required = false, defaultValue = "World") name: String, model: Model): String {
+    fun loginPage(model: Model): String {
 
-        model.addAttribute("name", name)
+        return "login/loginPage"
+    }
 
-        return "loginPage"
+    @GetMapping("/resetPassword")
+    fun resetPage(model: Model): String {
+
+        return "login/resetPage"
+    }
+
+    @GetMapping("/signup")
+    fun signupPage(model: Model): String {
+
+        return "login/signupPage"
     }
 
 }
